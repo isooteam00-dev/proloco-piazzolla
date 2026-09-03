@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo - Pro Loco Piazzolla</title>
+    <meta name="description" content="Scopri la nostra storia e le tradizioni della Pro Loco Piazzolla.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pro Loco Piazzolla">
+    <meta property="og:title" content="Chi Siamo - Pro Loco Piazzolla">
+    <meta property="og:description" content="Scopri la nostra storia e le tradizioni della Pro Loco Piazzolla.">
+    <meta property="og:image" content="assets/proloco 1.jpeg">
+    <meta property="og:locale" content="it_IT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chi Siamo - Pro Loco Piazzolla">
+    <meta name="twitter:description" content="Scopri la nostra storia e le tradizioni della Pro Loco Piazzolla.">
+    <meta name="twitter:image" content="assets/proloco 1.jpeg">
+    <meta name="theme-color" content="#004b87">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <style>
+        .storia-single-img {
+            display: block;
+            width: 100%;
+            border-radius: 16px;
+            margin: 1.5rem 0 0.5rem;
+            cursor: zoom-in;
+        }
+
+        .storia-caption {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .storia-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .storia-gallery-grid .g-item {
+            overflow: hidden;
+        }
+
+        .storia-gallery-grid img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            cursor: zoom-in;
+            transition: transform 0.4s ease;
+        }
+
+        .storia-gallery-grid .g-item:hover img {
+            transform: scale(1.04);
+        }
+
+        #storia-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,0.92);
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        #storia-lightbox.active {
+            display: flex;
+        }
+
+        #storia-lightbox img {
+            max-width: 90vw;
+            max-height: 88vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+        }
+
+        #storia-lightbox-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+            opacity: 0.8;
+        }
+
+        #storia-lightbox-close:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <app-header></app-header>
+
+    <main>
+        <section class="page-header fade-in">
+            <h1>Chi Siamo</h1>
+            <p>La nostra storia, le nostre tradizioni e la nostra missione</p>
+        </section>
+
+        <section class="page-content fade-in">
+            <h2>Un po' di Storia</h2>
+            <p>La Pro Loco Piazzolla è nata nel 2019 come associazione locale, regolarmente iscritta all'UNPLI dal 2020 ed entrata ufficialmente l'11 dicembre 2023 nell'Albo Regionale delle associazioni Pro Loco della Campania, per dare una voce organizzata alla nostra comunità e per valorizzare un territorio ricco di storia, identità e potenzialità.</p>
+            <p>È nata dal desiderio di unire le persone, creare iniziative culturali e sociali e promuovere Piazzolla come luogo vivo, partecipato e orgoglioso delle proprie radici.</p>
+            
+            <h2>Cosa Facciamo</h2>
+            <p>Siamo una realtà radicata nel territorio che lavora costantemente per la valorizzazione turistica di Piazzolla e del suo patrimonio. I nostri principali ambiti di intervento includono:</p>
+            <ul>
+                <li>Promozione del patrimonio storico, artistico e ambientale di Piazzolla.</li>
+                <li>Organizzazione di eventi culturali, mostre e visite guidate.</li>
+                <li>Gestione e coordinamento dei progetti di Servizio Civile Universale.</li>
+                <li>Collaborazione con enti locali e scuole per progetti di sviluppo.</li>
+            </ul>
+
+            <h2>I Nostri Obiettivi</h2>
+            <p>Crediamo che la bellezza e la storia della nostra frazione debbano essere vissute non solo dai cittadini piazzollesi, ma debbano diventare un punto di riferimento per il turismo regionale e nazionale. Attraverso la passione dei nostri volontari, miriamo a creare un ecosistema culturale vitale e dinamico.</p>
+
+            <h2>La Nostra Missione</h2>
+            <p>Da lungo tempo radicata nel comprensorio nolano, l'Associazione Pro Loco Piazzolla opera attivamente per tutelare, esaltare e far conoscere le ricchezze storiche, artistiche, ambientali e culturali della zona, riservando uno sguardo d'eccellenza al borgo storico di Piazzolla e alla sua straordinaria eredità architettonica medievale.</p>
+            <p>Sin dai suoi esordi, il sodalizio si è fatto promotore di un'ampia serie di iniziative ed eventi di rilievo, realizzati sia nella frazione piazzollese che nell'intero territorio comunale.</p>
+            <p>L'azione della Pro Loco si è sempre concentrata sull'indagine, la tutela e la trasmissione delle proprie radici culturali, unita a una riscoperta del contesto naturale e dell'impianto antropico locale.</p>
+            <p>Questo impegno costante ha permesso di risvegliare e riportare alla luce usi, usanze e tradizioni che rischiavano di andare perduti. Salvaguardare e trasmettere la "Memoria Storica" di Piazzolla non è soltanto un atto dovuto, ma un'esigenza fondamentale per offrire alle future generazioni un patrimonio identitario ricco di valore civile e sociale; un baluardo essenziale per evitare che l'identità collettiva si dissolva sotto la spinta di una modernità poco consapevole.</p>
+
+            <h3>Oggetto Sociale</h3>
+            <p>La Pro Loco – è autonoma, apartitica e senza scopo di lucro – ha come oggetto sociale:</p>
+            <ol type="a">
+                <li>La tutela, promozione e valorizzazione delle tradizioni popolari e delle risorse di interesse artistico e storico presenti sul territorio, compreso la realizzazione e/o la gestione di biblioteche e musei;</li>
+                <li>La tutela e valorizzazione della natura, dell'ambiente e del territorio;</li>
+                <li>La promozione e realizzazione di corsi di formazione professionale;</li>
+                <li>L'assistenza ai lavoratori, ai turisti, agli emigranti ed agli immigrati;</li>
+                <li>La vigilanza sul prodotto turistico;</li>
+                <li>Lo svolgimento di attività di utilità sociale e di solidarietà sia verso gli associati che verso terzi, finalizzate alla conoscenza ed agli scambi culturali.</li>
+            </ol>
+
+            <h3>Attività e Finalità</h3>
+            <p>Per il perseguimento di tali finalità, la Pro Loco Piazzolla si propone in particolare di:</p>
+            <ol type="a">
+                <li>Predisporre programmi di sviluppo socio economico;</li>
+                <li>Organizzare, in proprio o per conto del Comune e di altri organismi pubblici e privati, feste, spettacoli, convegni e manifestazioni culturali;</li>
+                <li>Gestire ostelli, strutture turistiche, gastronomiche e ricettive;</li>
+                <li>Promuovere iniziative tese alla ricerca ed alla divulgazione delle tradizioni popolari;</li>
+                <li>Promuovere missioni e visite di studio e di lavoro di operatori tecnici in Italia e nel mondo;</li>
+                <li>Organizzare, anche mediante l'impiego di sistemi telematici e virtuali (Internet ed altri), mostre, fiere ed esposizioni per la diffusione dei prodotti locali nel mondo;</li>
+                <li>Porre la propria struttura e la propria esperienza al servizio degli enti pubblici e privati;</li>
+                <li>Svolgere attività editoriale ed ogni attività attinente e pertinente, mediante pubblicazioni di qualsiasi genere e la distribuzione anche per corrispondenza di libri, giornali, riviste, pubblicazioni in genere e materiale connesso ed affine;</li>
+                <li>Effettuare campagne pubblicitarie e promozionali a favore del paese, nonché di relazioni pubbliche, di ricerche qualitative e quantitative di mercato, ivi incluse le strategie di comunicazione e di strumenti atti a creare, modificare e/o migliorare un'immagine;</li>
+                <li>Assumere incarichi per la preparazione e la realizzazione di campagne pubblicitarie, di conferenze, manifestazioni ed ogni altra attività atta alla divulgazione di qualsiasi genere di iniziativa turistica, commerciale, industriale ed editoriale;</li>
+                <li>Promuovere e gestire corsi di formazione professionale con particolare riferimento alla progettazione integrata;</li>
+                <li>Promuovere interscambi culturali, scientifici in Italia ed all'estero;</li>
+                <li>Svolgere attività commerciale, in ottemperanza a quanto previsto dallo stesso D.Lgs. 460/97, adeguando eventualmente la relativa contabilità fiscale alle norme in vigore;</li>
+                <li>Aderire ad organismi di categoria e ad altri con finalità similari e che promuovono la cultura ed il turismo in Italia ed all'estero, nonché ad associazioni naturalistiche ed ambientalistiche;</li>
+                <li>Esercitare attività turistiche, ricettive e di turismo sociale, ai sensi dell'art. 10 della legge 17 maggio 1983 n. 217, ed in attuazione della direttiva n. 90/314/CEE, organizzando viaggi, vacanze e circuiti ai sensi del decreto legislativo 17 marzo 1995 n. 111, nonché ai sensi del comma 3 dell'art. 111 del Testo unico delle imposte sui redditi, approvato con decreto del Presidente della Repubblica 22 dicembre 1986 n. 917 e modificato dall'art. 5 del Dlg. 460/97;</li>
+                <li>Assumere incarichi da enti pubblici e privati per la gestione di beni culturali, architettonici, ambientali, ecc.</li>
+                <li>Promuovere il movimento turistico interno ed internazionale, ed in particolare modo quello a carattere sociale, culturale, educativo, sportivo e ricreativo, con la partecipazione a mostre e fiere in Italia ed all'estero;</li>
+                <li>Sviluppare il turismo giovanile, promuovendo anche viaggi a scopo ricreativo ed istruttivo;</li>
+                <li>Favorire l'istituzione di centri di vacanza, campeggi, colonie, ecc. che pratichino condizioni accessibili alle categorie meno agiate;</li>
+                <li>Provvedere e concorre a studi, di carattere generale e particolare, sul turismo sociale;</li>
+                <li>Assumere ed assecondare ogni utile iniziativa per l'attuazione di attività turistiche sia in Italia che all'estero, per l'impiego del tempo libero dei cittadini, con particolare riguardo alle ferie annuali;</li>
+                <li>Promuovere ed incrementare, con apposite forme, il risparmio organizzato per le vacanze ed il turismo, anche attraverso la formazione del credito e la emissione di Card per godere di benefici propri ed offerti da altre associazioni ed organizzazioni similari;</li>
+                <li>Favorire i viaggi turistici in Italia di stranieri e di connazionali residenti all'estero, anche al fine di incrementare e sostenere il "turismo di ritorno";</li>
+                <li>Stipulare contratti, convenzioni, rappresentare gli associati, designare rappresentanti e delegati presso enti, istituiti ed organismi pubblici e privati;</li>
+                <li>Fornire l'assistenza ai lavoratori, ai turisti agli emigranti ed agli immigrati.</li>
+            </ol>
+
+            <hr style="margin: 3rem 0; border: none; border-top: 2px solid var(--accent-gold);">
+
+            <h2>Storia di Piazzolla e le sue particolarità</h2>
+            
+            <h3>La Storia di Piazzolla: Dalle Origini alla Bellezza Vesuviana</h3>
+
+            <h4>Un Territorio di Passaggio e di Natura</h4>
+            <p>Situata alle pendici del Monte Somma, in una posizione strategica tra Somma Vesuviana, Ottaviano e la piana di Nola, Piazzolla ha da sempre rappresentato un'area di fertile vocazione agricola e un punto di svago naturale. Attraversata storicamente da una via di comunicazione chiave tra Napoli e l'entroterra campano, la zona si è distinta sin dall'antichità per i suoi paesaggi lureggianti, tra cui lo storico Bosco Gaudio.</p>
+
+            <h4>Feudi, Nobili e la Famiglia Albertini</h4>
+            <p>La storia moderna del feudo inizia a delinearsi nel Cinquecento, un periodo segnato dai grandi cambiamenti politici del Regno di Napoli e dai passaggi di proprietà tra potenti famiglie nobiliari. È nel 1552 che il feudo, con la Starza della Piazzolla e il Bosco del Gaudio, entra nei possedimenti della famiglia Albertini. Sotto il loro dominio la tenuta cresce in importanza e, agli inizi del Seicento, prende forma con le prime imponenti opere architettoniche della masseria.</p>
+
+            <h4>L'Era dei Gesuiti: Agricoltura ed Eccellenza Vitivinicola</h4>
+            <p>Nella prima metà del XVII secolo, grazie alla donazione della principessa Beatrice Orsini, la gestione del Feudo passa alla Compagnia di Gesù. Nonostante la devastante eruzione del Vesuvio del 1631, i padri Gesuiti rilanciano la tenuta trasformandola in un vero e proprio polo agricolo di riferimento per l'intera area. La struttura viene ampliata con enormi cantine e diventa rinomata in tutto il Regno per la produzione di vini pregiati come il Lagrima e il Greco.</p>
+
+            <h4>Da Delizia Reale a Bene Comunitario</h4>
+            <p>Nel 1767, con l'espulsione dei Gesuiti, i beni vengono confiscati dalla Corona borbonica. Sotto il re Ferdinando IV e con l'intervento dell'architetto Francesco Collecini (allievo del Vanvitelli), la struttura si trasforma in una splendida residenza e riserva di caccia reale, nota come Palazzo Albertini.</p>
+            <p>Durante l'epoca napoleonica dell'Ottocento, il patrimonio demaniale viene messo all'asta e acquistato dai duchi di Castel Pagano e Campochiaro; i vasti terreni agricoli vengono suddivisi per favorire il lavoro dei contadini locali.</p>
+
+            <h4>Le Radici Profonde</h4>
+            <p>Attraverso i passaggi di proprietà dell'Ottocento e del Novecento — tra cui quelli della famiglia Capocci fino alle vendite agli abitanti del luogo nel 1919 — Piazzolla conserva intatta la sua forte identità. Un'identità che affonda le radici ancora più indietro nel tempo: il ritrovamento di reperti di epoca romana nei pressi del palazzo testimonia infatti come questo territorio fosse vivo e abitato ben prima dell'epoca feudale.</p>
+
+            <h3>Il borgo storico</h3>
+            <p>Ancora oggi il centro di Piazzolla conserva tracce dell'antico impianto urbano, tra archi, corti e antiche abitazioni che raccontano il passato feudale e rurale della frazione.</p>
+            <img src="assets/proloco 1.jpeg" alt="Scorci del centro storico di Piazzolla, tra l'antico arco e le corti d'epoca" class="storia-single-img" onclick="openStoriaLightbox(this.src, this.alt)">
+            <p class="storia-caption">Scorci del centro storico di Piazzolla</p>
+
+            <h3>Feste</h3>
+
+            <h4>La Festa Patronale di Maria SS. del Rosario</h4>
+            <p>È un evento importante e sentito di Piazzolla, che attira ogni anno centinaia di fedeli e visitatori.</p>
+            
+            <p><strong>La Processione:</strong> Il momento centrale è la solenne processione della bellissima statua della Madonna del Rosario per le strade della frazione, accompagnata dalla banda musicale. I balconi delle case vengono addobbati a festa con coperte di pregio e fiori.</p>
+            
+            <p><strong>I Festeggiamenti Civili:</strong> La piazza centrale si riempie di luci (le classiche luminarie campane), bancarelle di dolciumi, concerti di musica leggera o neomelodica e spettacoli comici, per poi chiudersi con i tradizionali fuochi d'artificio.</p>
+
+            <h3>Il legame con la Festa dei Gigli</h3>
+            <p>Anche se Piazzolla è una frazione, l'anima piazzolese è profondamente legata alla millenaria <strong>Festa dei Gigli</strong> (Patrimonio UNESCO) che si tiene a Nola. Moltissimi cittadini di Piazzolla fanno parte delle storiche "paranze" (i cullatori che trasportano gli obelischi di legno) o sono maestri di festa, portando l'orgoglio della propria frazione nel cuore della festa principale.</p>
+        </section>
+    </main>
+
+    <app-footer></app-footer>
+
+    <!-- Lightbox Storia -->
+    <div id="storia-lightbox" role="dialog" aria-modal="true" aria-label="Foto ingrandita" onclick="closeStoriaLightbox(event)">
+        <button id="storia-lightbox-close" onclick="closeStoriaLightbox()" aria-label="Chiudi">&times;</button>
+        <img id="storia-lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        function openStoriaLightbox(src, alt) {
+            const lb = document.getElementById('storia-lightbox');
+            document.getElementById('storia-lightbox-img').src = src;
+            document.getElementById('storia-lightbox-img').alt = alt;
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeStoriaLightbox(e) {
+            if (e && e.target === document.getElementById('storia-lightbox-img')) return;
+            document.getElementById('storia-lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeStoriaLightbox();
+        });
+    </script>
+</body>
+</html>
