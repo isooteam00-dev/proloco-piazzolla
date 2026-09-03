@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;700&family=Playfair+Display:wght@600;700&display=swap');
 
 :root {
-    
+    /* Forza sempre il tema chiaro, anche se il telefono e' in modalita' notte */
+    color-scheme: only light;
+
     --bg-primary: #ffffff;
     --bg-secondary: #f8f9fa;
     --text-primary: #212529;
@@ -14,6 +16,37 @@
     --border-color: #e9ecef;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
     --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+html {
+    color-scheme: only light;
+    background-color: #ffffff;
+}
+
+/* Anche se il dispositivo e' impostato in modalita' scura, il sito mantiene
+   i colori del tema chiaro: qui ridichiariamo esplicitamente le variabili. */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: only light;
+
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8f9fa;
+        --text-primary: #212529;
+        --text-secondary: #6c757d;
+        --accent-blue: #004b87;
+        --accent-blue-light: #0066cc;
+        --accent-gold: #cfa862;
+        --nav-bg: rgba(255, 255, 255, 0.78);
+        --card-bg: #ffffff;
+        --border-color: #e9ecef;
+        --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+        --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    body {
+        background-color: #ffffff;
+        color: #212529;
+    }
 }
 
 * {
