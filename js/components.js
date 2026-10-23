@@ -76,7 +76,7 @@ class AppFooter extends HTMLElement {
                                  </div>
                                  <div class="footer-bottom">
                                          <p>&copy; ${new Date().getFullYear()} Pro Loco Piazzola di Nola. Tutti i diritti riservati.</p>
-                                         <p class="footer-made-by">Made by <a href="https://www.isotech-ai.it/" target="_blank" rel="noopener noreferrer" class="footer-isotech-link">isotech-ai</a></p>
+                                         <p class="footer-made-by"><a href="https://www.isotech-ai.it/" target="_blank" rel="noopener noreferrer" class="footer-isotech-link" aria-label="Design by IsoTech"><span class="footer-design-by">Design by</span> <span class="footer-isotech-name">IsoTech</span></a></p>
                                  </div>
                          </footer>
                  `;
